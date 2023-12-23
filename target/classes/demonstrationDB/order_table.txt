@@ -1,0 +1,1 @@
+order_id|$|customer_name|$|order_date|$|total_amount|$|status

@@ -1,0 +1,4 @@
+employee_id|$|name|$|hire_date|$|job_title|$|salary
+1|$|Steven Rogers|$|2023-10-26|$|Senior|$|75000.00
+2|$|Jessy Pinkman|$|2023-10-28|$|Senior|$|60000.50
+3|$|Walter White|$|2023-10-28|$|BreakingBad|$|55000.25
