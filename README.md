@@ -12,17 +12,43 @@ In the development of the PrototypeRDBMS, I have adhered to Object Oriented Prog
 
 The Single Responsibility Principle dictates that a module should have only one reason to change. Throughout the project, I have adhered to this principle, ensuring loosely coupled classes. For instance, separate classes handle each database operation, exemplified by CreateQuery, SelectQuery, UpdateQuery, and DeleteQuery classes.
 
+![Select Query SRP](./assets/SelectQuerySRP.png)
+
+![Create Query SRP](./assets/createQuerySRP.png)
+
 ## Open / Closed Principle (OCP)
 
 The Open/Closed Principle states that classes and modules should be open for extension but closed for modification. In the code snippet provided, a parent class, CoreDatabaseQuery, contains common methods required for all types of query execution. Child classes extend this and implement their respective CRUD query operations in separate concrete classes.
+
+
+![Open/Closed Code Implementation](./assets/openClosedPrinciple.png)
+
+
+## Liskov Substitution (LSP) and Interface Segregation
+
+The LSP states that objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program. The code snippet below demonstrates application of SOLID principles especially the Single responsibility and the Liskov substitution.
+
+I have declared a generic parameter which must be child class of CorDatabaseQuery. Then I have made multiple implementations of the interface methods which demonstrate the application of the Liskov substitution Principle (LSP). The below structure also clearly follows the Interface Segregation principle of SOLID. As the LSP principle states that: Clients should not be forced to depend on interfaces they do not use.
+
+![LSP Implementation](./assets/LSP.png)
 
 ## Dependency Inversion (DIP)
 
 Following the Dependency Inversion Principle, high-level modules should not depend on low-level modules. Instead, both should depend on abstractions. Throughout the development process, UserAuthentication, a high-level module, depends on the IEncryptDecryptService interface, which acts as an abstraction. This dependency is injected through the constructor, adhering to loose coupling.
 
+![Dependency Inversion Implementation](./assets/DependencyInversion.png)
+
+
 ## Singleton Design Pattern and Builder Design Pattern
 
 The ConfigUtils class is implemented as a Singleton, ensuring a single instance in the application. The getInstance() method follows lazy initialization, creating the instance only when required. This singleton class manages the loading and accessing of configuration properties.
+
+
+![Singleton Design Implementation](./assets/SingletonDesignPattern.png)
+
+![Builder Design Pattern Implementation](./assets/BuilderDesingPattern.png)
+
+![Bulder Design Implementation](./assets/BuilderDesingPattern2.png)
 
 ---
 
@@ -84,4 +110,11 @@ SELECT * FROM employee
 END TRANSACTION
 ```
 
-Since the transaction was rolled back, the insert query data was not persisted to the file upon execution.
+Since the transaction was rolled back, the insert query data would not be persisted to the file upon execution.
+
+![Singleton Design Implementation](./assets/SingletonDesignPattern.png)
+
+![Singleton Design Implementation](./assets/SingletonDesignPattern.png)
+
+![Singleton Design Implementation](./assets/SingletonDesignPattern.png)
+
