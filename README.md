@@ -112,9 +112,25 @@ END TRANSACTION
 
 Since the transaction was rolled back, the insert query data would not be persisted to the file upon execution.
 
-![Singleton Design Implementation](./assets/SingletonDesignPattern.png)
+## Select Query Validation:
 
-![Singleton Design Implementation](./assets/SingletonDesignPattern.png)
+![Select Query Validation](./assets/selectValidation.png)
 
-![Singleton Design Implementation](./assets/SingletonDesignPattern.png)
+## Select With Where Clause Validation:
+
+![Singleton Design Implementation](./assets/selectWhereClauseValidation.png)
+
+## Insert RollBack Validation Testing:
+
+![Insert RollBack Validation](./assets/insertRollbackValidation.png)
+
+## Delete RollBack Validation Testing:
+
+![Delele Rollback](./assets/deleteRollbackValidation.png)
+
+## Transaction Update Validation:
+
+![Delele Rollback](./assets/transactionUpdateValidation.png)
+
+
 
